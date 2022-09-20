@@ -9,7 +9,7 @@ export const Result = () => {
     const timeOfQuiz = useSelector(state => state.questions.timeOfQuiz);
     return(
             <Modal centered show={true} className="result-page" dialogClassName="text-center">
-                <Modal.Header className="h-modal-result">
+                <Modal.Header className="h-modal">
                     <Modal.Title style={{color: numberTrues >= 7 && "green"}}>{numberTrues >= 7 ? "Congratulations" : "Sorry!"}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body><br />
@@ -17,7 +17,7 @@ export const Result = () => {
                         <ProgressBar now={numberTrues*10} label={`${numberTrues*10}%`} variant={numberTrues >= 7 ? "success" : "danger"} />
                     </ProgressBar><br />
                 </Modal.Body>
-                <Modal.Footer className="foo-modal-result">
+                <Modal.Footer className="foo-modal">
                     <div>Your true answers: <Badge bg="success">{numberTrues}</Badge></div>
                     <div>Your time: {Math.floor(timeOfQuiz / 60)} minute(s) and {timeOfQuiz % 60} seconds</div>
                 </Modal.Footer>

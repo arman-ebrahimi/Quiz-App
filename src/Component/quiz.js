@@ -48,7 +48,9 @@ export const Quiz = ({obj, onclick, answers, numberQues}) => {
                      ${clicked[clicked.length-1] === "clickTrue" + index ? "clickTrue" : clicked[clicked.length-1] ===
                         "clickFalse" + index ? 'clickFalse' : ''}`} key={index}>
                         <div className="row">
-                            <div className="col-2 bg-primary fs-2 align-text-top text-center text-white">{['A', 'B', 'C', 'D'][index]}</div>
+                            <div className="col-2 bg-primary fs-2 text-white d-flex align-items-center justify-content-center">
+                                {['A', 'B', 'C', 'D'][index]}
+                            </div>
                             <div className="col-10 py-3">{item}</div>
                         </div>
                     </button>

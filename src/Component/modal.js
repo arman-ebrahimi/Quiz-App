@@ -1,5 +1,6 @@
 import {useState} from "react";
 import Modal from "react-bootstrap/Modal";
+import {ModalBody} from "react-bootstrap";
 
 export const ModalStart = ({onclick}) => {
     const [isOpen, setIsOpen] = useState(true);
@@ -8,11 +9,18 @@ export const ModalStart = ({onclick}) => {
     }
     return(
             <Modal size="lg" centered show={isOpen} className="Modal">
-                <Modal.Header>
+                <Modal.Header className="h-modal">
                     <Modal.Title>Start Quiz</Modal.Title>
                 </Modal.Header>
-                <Modal.Footer>
-                    <button onClick={() => {hideModal();onclick()}}>Start</button>
+                <ModalBody>
+                    This is a quiz application built using ReactJS.
+
+                    Currently it's loaded with CSS questions from W3Scools, but you can easily load any type of questions into it.
+
+                    It will dynamically load the question->answers pair and upload them into the components.
+                </ModalBody>
+                <Modal.Footer className="foo-modal">
+                    <button className="py-2 px-5" onClick={() => {hideModal();onclick()}}>Start</button>
                 </Modal.Footer>
             </Modal>
     )

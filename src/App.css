@@ -15,6 +15,11 @@
   border: solid #0d6efd;
   padding: 0;
   background-color: white;
+  transition: transform 0.3s;
+}
+
+.items:hover {
+  transform: scale(1.05);
 }
 
 .items:disabled {
@@ -39,14 +44,25 @@
   background-color: grey;
 }
 
-.h-modal-result {
+.h-modal {
   margin: 0 auto;
 }
 
-.foo-modal-result {
+.foo-modal {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+.foo-modal button {
+  background-color: black;
+  color: white;
+  border: solid 1px transparent;
+  transition: 0.5s;
+}
+.foo-modal button:hover {
+  background-color: white;
+  color: black;
+  border: solid 1px;
 }
 
 /*# sourceMappingURL=App.css.map */
